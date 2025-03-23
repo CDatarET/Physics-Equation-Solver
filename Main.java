@@ -104,29 +104,13 @@ class Physics {
                 }
             }
             else if(equ == 4){
-                System.out.println("Enter missing variable- r (radius), a (atomic number)");
-                char vr = scan.next().charAt(0);
                 System.out.println("Enter quantum number");
                 int n = scan.nextInt();
                 double b = 5.29e-11;
-                
-                if(vr == 'r'){
-                    System.out.println("Enter atomic number");
-                    int a = scan.nextInt();
+                System.out.println("Enter atomic number");
+                int a = scan.nextInt();
                     
-                    System.out.println("radius is " + (b*(Math.pow(n,2)/a))+"m");
-                }
-                else if(vr == 'a'){
-                    System.out.println("Enter radius in m (format 1e-21)");
-                    double r = scan.nextDouble();
-                    
-                    System.out.println("Atomic Number is " + (int)(r/b/Math.pow(n,2)));
-                    
-                    
-                }
-                else{
-                    System.out.println("Invalid Variable");
-                }
+                System.out.println("radius is " + (b*(Math.pow(n,2)/a))+"m");
             }
             else{
                 System.out.println("Not a valid operation");
