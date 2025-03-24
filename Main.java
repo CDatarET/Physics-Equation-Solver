@@ -12,6 +12,7 @@ class Physics {
             System.out.println("3 for Energy level of infinite square well");
             System.out.println("4 for Radius of Bohr orbit");
             System.out.println("5 for Energy of Electron in nth orbit");
+            System.out.println("6 for Velocity of Electron in nth orbit");
            
             int equ = scan.nextInt();
             if(equ == 1){
@@ -122,6 +123,15 @@ class Physics {
                 double ans = Math.pow(a,2)/Math.pow(n,2);
                 ans = -13.6*ans;
                 System.out.println("The energy of Electron in "+n+"th orbit is "+ans+"Ev");
+            }
+            else if(equ == 6){
+                System.out.println("Enter Atomic number");
+                int a = scan.nextInt();
+                System.out.println("Enter nth orbit");
+                int n = scan.nextInt();
+                
+                double ans = 6.626e-34/(2*Math.PI*9.11e-31*5.29e-11);
+                System.out.println("The velocity of electron in "+n+"th orbit is "+ ans*(a/n)+"m/s");
             }
             else{
                 System.out.println("Not a valid operation");
