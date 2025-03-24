@@ -23,7 +23,7 @@ class Physics {
                     double p = scan.nextDouble();
                     double h = 1.055e-34;
                    
-                    System.out.println("x = " + ((h/2)/p)+"m");
+                    System.out.println("x >= " + ((h/2)/p)+"m");
                    
                 }
                 else if(vr == 'p'){
@@ -31,7 +31,7 @@ class Physics {
                     double x = scan.nextDouble();
                     double h = 1.055e-34;
                    
-                    System.out.println("p = " + ((h/2)/x)+"Kg*m/s");
+                    System.out.println("p => " + ((h/2)/x)+"Kg*m/s");
                 }
                 else if(vr == 'h'){
                     System.out.println("Enter x in m");
@@ -39,7 +39,7 @@ class Physics {
                     System.out.println("Enter p in Kg*m/s:");
                     double p = scan.nextDouble();
                    
-                    System.out.println("hbar = " + (x*p*2)+"Js");
+                    System.out.println("hbar <= " + (x*p*2)+"Js");
                 }
                 else{
                     System.out.println("Invalid Variable");
@@ -122,7 +122,7 @@ class Physics {
                
                 double ans = Math.pow(a,2)/Math.pow(n,2);
                 ans = -13.6*ans;
-                System.out.println("The energy of Electron in "+n+"th orbit is "+ans+"Ev");
+                System.out.println("The energy of Electron in "+n+"th orbit is "+ans+"eV");
             }
             else if(equ == 6){
                 System.out.println("Enter Atomic number");
