@@ -3,7 +3,7 @@ import java.util.Scanner;
 class Physics {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        
+       
         char yn = 'y';
         while(yn != 'n'){
             System.out.println("Which equation do you want to solve?\nEnter-");
@@ -11,7 +11,8 @@ class Physics {
             System.out.println("2 for De Broglie Wavelength");
             System.out.println("3 for Energy level of infinite square well");
             System.out.println("4 for Radius of Bohr orbit");
-            
+            System.out.println("5 for Energy of Electron in nth orbit");
+           
             int equ = scan.nextInt();
             if(equ == 1){
                 System.out.println("Enter missing variable- x, p, h, (type h for hbar)");
@@ -20,15 +21,15 @@ class Physics {
                     System.out.println("Enter p in Kg*m/s:");
                     double p = scan.nextDouble();
                     double h = 1.055e-34;
-                    
+                   
                     System.out.println("x = " + ((h/2)/p)+"m");
-                    
+                   
                 }
                 else if(vr == 'p'){
                     System.out.println("Enter x in m");
                     double x = scan.nextDouble();
                     double h = 1.055e-34;
-                    
+                   
                     System.out.println("p = " + ((h/2)/x)+"Kg*m/s");
                 }
                 else if(vr == 'h'){
@@ -36,7 +37,7 @@ class Physics {
                     double x = scan.nextDouble();
                     System.out.println("Enter p in Kg*m/s:");
                     double p = scan.nextDouble();
-                    
+                   
                     System.out.println("hbar = " + (x*p*2)+"Js");
                 }
                 else{
@@ -46,7 +47,7 @@ class Physics {
             else if(equ == 2){
                 System.out.println("Enter missing variable- l (lambda), m, v, h");
                 char vr = scan.next().charAt(0);
-                
+               
                 if(vr == 'l'){
                     double h = 6.626e-34;
                     System.out.println("Enter m in kg:");
@@ -73,7 +74,7 @@ class Physics {
                     double l = scan.nextDouble();
 
                     System.out.println("v = " + (h/(m*l))+"m/s");
-                    
+                   
                 }
                 else if(vr == 'h'){
                     System.out.println("Enter m in kg:");
@@ -109,8 +110,18 @@ class Physics {
                 double b = 5.29e-11;
                 System.out.println("Enter atomic number");
                 int a = scan.nextInt();
-                    
+                   
                 System.out.println("radius is " + (b*(Math.pow(n,2)/a))+"m");
+            }
+            else if(equ == 5){
+                System.out.println("Enter Atomic number");
+                int a = scan.nextInt();
+                System.out.println("Enter nth orbit");
+                int n = scan.nextInt();
+               
+                double ans = Math.pow(a,2)/Math.pow(n,2);
+                ans = -13.6*ans;
+                System.out.println("The energy of Electron in "+n+"th orbit is "+ans+"Ev");
             }
             else{
                 System.out.println("Not a valid operation");
